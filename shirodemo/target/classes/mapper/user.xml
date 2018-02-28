@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.shiro.demo.dao.UserDao">
+	<select id="getUserInfoByUserCode" parameterType="java.lang.String"
+		resultType="cn.shiro.demo.entity.UserInfo">
+		select id as id,usercode as usercode ,username as
+		username,password as password,salt as salt from sys_user where
+		usercode=#{userCode}
+	</select>
+</mapper>
